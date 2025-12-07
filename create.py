@@ -22,29 +22,27 @@ def createFrame(app):
     signup_button = ctk.CTkButton(container,text="Sign Up",width=100,height=45,font=("DM Sans", 16),fg_color="#00BF6B",hover_color="#00a65c",command=app.handle_signup)
 
     #Alerts
-    feedback = ctk.CTkLabel(container,text="",font=("DM Sans", 13),text_color="red")
-
-
-
-    #Entrys
-    username_entry = ctk.CTkEntry(container,placeholder_text="Enter your username",width=300,height=40,font=("DM Sans", 16),border_color="#6D412A",border_width=2,text_color="#6D412A",fg_color="#FFFFFF",placeholder_text_color="#6D412A")
-    email_entry = ctk.CTkEntry(container,placeholder_text="Enter your email",width=300,height=40,font=("DM Sans", 16),border_color="#6D412A",border_width=2,text_color="#6D412A",fg_color="#FFFFFF",placeholder_text_color="#6D412A")
-    password_entry = ctk.CTkEntry(container,placeholder_text="Enter your password",width=300,height=40,font=("DM Sans", 16),border_color="#6D412A",border_width=2,text_color="#6D412A",fg_color="#FFFFFF",placeholder_text_color="#6D412A",show="*")
-    confirm_entry = ctk.CTkEntry(container,placeholder_text="Confirm your password",width=300,height=40,font=("DM Sans", 16),border_color="#6D412A",border_width=2,text_color="#6D412A",fg_color="#FFFFFF",placeholder_text_color="#6D412A",show="*")
+    app.feedback = ctk.CTkLabel(container,text="",font=("DM Sans", 13),text_color="red")
     
-    #Packing
+    #Entrys
+    app.username_entry = ctk.CTkEntry(container,placeholder_text="Enter your username",width=300,height=40,font=("DM Sans", 16),border_color="#6D412A",border_width=2,text_color="#6D412A",fg_color="#FFFFFF",placeholder_text_color="#6D412A")
+    app.email_entry = ctk.CTkEntry(container,placeholder_text="Enter your email",width=300,height=40,font=("DM Sans", 16),border_color="#6D412A",border_width=2,text_color="#6D412A",fg_color="#FFFFFF",placeholder_text_color="#6D412A")
+    app.password_entry = ctk.CTkEntry(container,placeholder_text="Enter your password",width=300,height=40,font=("DM Sans", 16),border_color="#6D412A",border_width=2,text_color="#6D412A",fg_color="#FFFFFF",placeholder_text_color="#6D412A",show="*")
+    app.confirm_entry = ctk.CTkEntry(container,placeholder_text="Confirm your password",width=300,height=40,font=("DM Sans", 16),border_color="#6D412A",border_width=2,text_color="#6D412A",fg_color="#FFFFFF",placeholder_text_color="#6D412A",show="*")
+    
+    #Packing (.app)
     existing_user.pack(side="left")
     create_word.pack()
     signup_section.pack(pady=(0, 10))
     login_label.pack(side="left")
     username_tag.pack(anchor="w", pady=(5, 0), padx=(42, 0))
-    username_entry.pack(pady=(0, 8))
+    app.username_entry.pack(pady=(0, 8))
     email_tag.pack(anchor="w", pady=(5, 0), padx=(42, 0))
-    email_entry.pack(pady=(0, 8))
+    app.email_entry.pack(pady=(0, 8))
     password_tag.pack(anchor="w", pady=(5, 0), padx=(42, 0))
-    password_entry.pack(pady=(0, 8))
-    confirm_entry.pack(pady=(0, 8))
-    feedback.pack(pady=(5, 0))
+    app.password_entry.pack(pady=(0, 8))
+    app.confirm_entry.pack(pady=(0, 8))
+    app.feedback.pack(pady=(5, 0))
     signup_button.pack(pady=(8, 150))
 
     #Transfer to login frame

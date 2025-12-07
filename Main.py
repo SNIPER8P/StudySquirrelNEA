@@ -4,6 +4,7 @@ import loading
 import login
 import create
 import auth
+import dashboard
 
 class App(ctk.CTk):
     def __init__(self):
@@ -22,6 +23,7 @@ class App(ctk.CTk):
         self.loadingFrame = loading.loadingFrame(self)
         self.loginFrame = login.loginFrame(self)
         self.createFrame = create.createFrame(self)
+        self.dashboardFrame = dashboard.dashboardFrame(self)
 
         self.show_frame(self.loadingFrame)
         self.run_progress()
@@ -68,3 +70,4 @@ class App(ctk.CTk):
 if __name__ == "__main__":
     app = App()
     app.mainloop()
+

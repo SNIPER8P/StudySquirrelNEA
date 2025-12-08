@@ -62,6 +62,24 @@ class App(ctk.CTk):
             self.feedback.configure(text="Account created successfully!", text_color="green")
         except Exception as e:
             self.feedback.configure(text=f"Error creating account: {str(e)}", text_color="red")
+    """
+        def handle_login(self):
+        username = self.username_entry.get().strip()
+        password = self.password_entry.get().strip()
+
+        #Validate inputs
+        error = auth.checkLogin(username, password)
+        if error:
+            self.feedback.configure(text=error, text_color="red")
+            return
+        elif error == None:
+            app.show_frame(app.dashboardFrame)
+
+        """  
+            
+     
+    
+    
 
     def clear_signup_form(self):
         for entry in [self.username_entry, self.email_entry, self.password_entry, self.confirm_entry]:
@@ -70,4 +88,5 @@ class App(ctk.CTk):
 if __name__ == "__main__":
     app = App()
     app.mainloop()
+
 
